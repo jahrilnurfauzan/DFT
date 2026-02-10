@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-#SBATCH -J nh3_slab
+#SBATCH -J TRAINING
 #SBATCH -p all
 #SBATCH -N 1
 #SBATCH --ntasks-per-node=64
