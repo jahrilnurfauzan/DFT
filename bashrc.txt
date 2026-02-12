@@ -1,0 +1,36 @@
+#alias
+alias l="ls -latrh --color"
+alias pip="python -m pip"
+alias ag='ase gui'
+alias cp='cp -v'
+alias sc="source ~/.bashrc"
+alias me="squeue -u g202425580"
+alias rds='cd $RDS/home/'
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/software/conda/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/software/conda/etc/profile.d/conda.sh" ]; then
+        . "/software/conda/etc/profile.d/conda.sh"
+    else
+        export PATH="/software/conda/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
+case $- in
+  *i*)
+    conda activate ase-gui
+
+    # X11 check (info only, no prompt change)
+    if [[ -n "$DISPLAY" ]]; then
+        echo "[X11 OK] DISPLAY=$DISPLAY"
+    else
+        echo "[X11 OFF]"
+    fi
+  ;;
+esac
