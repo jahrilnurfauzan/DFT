@@ -63,7 +63,7 @@ calc = Vasp(
     gga="PE",
 
     # k-points for slab
-    kpts=(5, 5, 5),
+    kpts=(5, 5, 5),   #box should be 10 x 10 x 10 or similar
     gamma=True,
 
     # parallelization (disable if problematic)
@@ -81,7 +81,7 @@ calc = Vasp(
     ibrion=2,
     isif=2,
     nsw=500,
-    ediffg=-0.02,
+    ediffg=-0.01,
 
     # misc
     prec="Normal",
