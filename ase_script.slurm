@@ -22,7 +22,7 @@ module load ase/3.23.0
 
 ulimit -s unlimited
 
-
+ 
 export OMP_NUM_THREADS=1
 
 export VASP_COMMAND="srun --mpi=pmix -n ${SLURM_NTASKS} vasp_std"
