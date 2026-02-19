@@ -32,4 +32,4 @@ export VASP_PP_PATH=/home/g202425580
 echo "VASP_COMMAND=$VASP_COMMAND"
 echo "VASP_PP_PATH=$VASP_PP_PATH"
 
-python -u ./run3.py
+python -u ./bulk_run3.py  #change with surface_run3.py for surface run
