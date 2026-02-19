@@ -3,7 +3,7 @@
 #SBATCH -p all
 #SBATCH -N 1
 #SBATCH --ntasks-per-node=64
-#SBATCH --time=7-00:00:00
+#SBATCH --time=2-00:00:00
 #SBATCH --hint=nomultithread
 #SBATCH --output=slurm-%j.out
 #SBATCH --error=slurm-%j.err
