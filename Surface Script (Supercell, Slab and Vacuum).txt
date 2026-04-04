@@ -14,7 +14,7 @@ bulk.pbc = (True, True, True)
 slab = surface(bulk, hkl, layers=layers, vacuum=0.0)
 slab = slab.repeat(repeat_xy)
 slab.center(vacuum=vacuum, axis=2)
-slab.pbc = (True, True, False)
+slab.pbc = (True, True, True)
 
 write("restart.json", slab)
 view(slab)
